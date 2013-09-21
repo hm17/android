@@ -1,0 +1,28 @@
+<resources>
+
+    <string name="app_name">SampleShoppingCart</string>
+    
+    <string name="title_activity_display_class">My New Class</string>
+    <string name="title_activity_main">Create a New Class</string>
+    <string name="class_title">Class Title</string>
+    
+    <!-- Edit Class Form -->
+    <string name="class_form_description">Edit the details for your class.</string>
+    <string name="edit_class_name">Enter class name</string>
+    <string name="button_name_add">Add</string>
+    <string name="edit_class_description">Enter class description</string>
+    <string name="edit_class_time">Enter class starting time</string>
+    <string name="edit_class_duration">Enter class duration</string>
+    <string name="edit_class_price">Enter class price</string>
+    <string name="edit_class_size">Enter class size</string>
+        
+    <!-- Instructor Choices -->
+    <string name="instructor">Choose an Instructor</string>
+    <string name="instructor1">Miss Sexy</string>  
+    <string name="instructor2">Miss Twerk</string>  
+    <string name="instructor3">Miss Determination</string>  
+    <string name="instructor4">Miss Legs for Days</string>  
+    
+    <string name="button_save_class">SAVE</string>
+
+</resources>

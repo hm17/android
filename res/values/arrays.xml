@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="instructor_list">  
+        <item>@string/instructor1</item>  
+        <item>@string/instructor2</item>  
+        <item>@string/instructor3</item>  
+        <item>@string/instructor4</item>  
+    </string-array>  
+</resources>
