@@ -10,7 +10,7 @@ import android.widget.Spinner;
 import com.swegnchic.sampleshoppingcart.danceclasses.DanceClass;
 
 public class MainActivity extends Activity {
-	public final static String CLASS_NAME = "com.swegnchic.sampleshoppingcart.CLASSNAME";
+	public final static String DANCE_CLASS = "DANCECLASS";
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,14 @@ public class MainActivity extends Activity {
     }
     
     public void saveClass(View view) {
+    	DanceClass danceClass = buildDanceClass();
+    	
+    	Intent intent = new Intent(this, DisplayClassActivity.class);
+    	intent.putExtra(DANCE_CLASS, danceClass);
+    	startActivity(intent);
+    }
+    
+    private DanceClass buildDanceClass() {
     	DanceClass danceClass = new DanceClass();
     	danceClass.setName(getValueFromEditTextView(R.id.edit_class_name));
     	danceClass.setDescription(getValueFromEditTextView(R.id.edit_class_description));
@@ -28,9 +36,7 @@ public class MainActivity extends Activity {
     	danceClass.setSize(Integer.parseInt(getValueFromEditTextView(R.id.edit_class_size)));
     	danceClass.setOriginalInstructor(getValueFromSpinner(R.id.spinner_instructors));
     	
-    	Intent intent = new Intent(this, DisplayClassActivity.class);
-    	intent.putExtra("danceClass", danceClass);
-    	startActivity(intent);
+    	return danceClass;
     }
     
     private String getValueFromEditTextView (int viewId) {

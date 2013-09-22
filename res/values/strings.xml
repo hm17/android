@@ -2,8 +2,8 @@
 
     <string name="app_name">SampleShoppingCart</string>
     
-    <string name="title_activity_display_class">My New Class</string>
     <string name="title_activity_main">Create a New Class</string>
+    <string name="title_activity_display_class">Dance Class Information</string>
     <string name="class_title">Class Title</string>
     
     <!-- Edit Class Form -->
@@ -24,5 +24,13 @@
     <string name="instructor4">Miss Legs for Days</string>  
     
     <string name="button_save_class">SAVE</string>
+    
+    <string name="class_display_name">Name: </string>
+    <string name="class_display_description">Description:</string>
+    <string name="class_display_time">Start Time:</string>
+    <string name="class_display_duration">Duration (in hours):</string>
+    <string name="class_display_price">Price:</string>
+    <string name="class_display_size">Students:</string>
+    <string name="class_display_instructor">Instructor:</string>
 
 </resources>

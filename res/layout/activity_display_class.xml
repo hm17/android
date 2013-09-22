@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView android:id="@+id/class_display_name_text"      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/class_display_name"
+        android:textSize="10pt" />
+        
+    <TextView android:id="@+id/class_display_name"      
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/class_display_name"
+        android:textSize="10pt" />
+ 
+    <TextView android:id="@+id/class_display_description_text"      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/class_display_description"
+        android:textSize="10pt" />
+            
+    <TextView android:id="@+id/class_display_description"      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/class_display_description"
+        android:textSize="10pt" />	    
+
+    <TextView android:id="@+id/class_display_time_text"      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/class_display_time"
+        android:textSize="10pt" />
+    
+    <TextView android:id="@+id/class_display_time"      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/class_display_time"
+        android:textSize="10pt" />	
+        
+    <TextView android:id="@+id/class_display_duration_text"      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/class_display_duration"
+        android:textSize="10pt" />
+
+    <TextView android:id="@+id/class_display_duration"      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/class_display_duration"
+        android:textSize="10pt" />	    
+        
+    <TextView android:id="@+id/class_display_price_text"      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/class_display_price"
+        android:textSize="10pt" />
+
+    <TextView android:id="@+id/class_display_price"      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/class_display_price"
+        android:textSize="10pt" />	
+        
+    <TextView android:id="@+id/class_display_size_text"      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/class_display_size"
+        android:textSize="10pt" />
+        
+    <TextView android:id="@+id/class_display_size"      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/class_display_size"
+        android:textSize="10pt" />	  
+          
+    <TextView android:id="@+id/class_display_instructor_text"      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/class_display_instructor"
+        android:textSize="10pt" />
+    
+    <TextView android:id="@+id/class_display_instructor"      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/class_display_instructor"
+        android:textSize="10pt" />	
+</LinearLayout>

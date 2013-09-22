@@ -3,6 +3,8 @@ package com.swegnchic.sampleshoppingcart.danceclasses;
 import java.io.Serializable;
 
 public class DanceClass implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 	private String name;
 	private String description;
 	private String startTime;
