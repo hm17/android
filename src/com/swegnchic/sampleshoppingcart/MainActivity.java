@@ -1,42 +1,40 @@
 package com.swegnchic.sampleshoppingcart;
 
+
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Spinner;
 
-import com.swegnchic.sampleshoppingcart.danceclasses.DanceClass;
+import com.swegnchic.sampleshoppingcart.constants.Constants;
+import com.swegnchic.sampleshoppingcart.loginmanager.LoginManager;
 
 public class MainActivity extends Activity {
-	public final static String DANCE_CLASS = "DANCECLASS";
+	private LoginManager loginManager;
+
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        loginManager = new LoginManager();          
     }
     
-    public void saveClass(View view) {
-    	DanceClass danceClass = buildDanceClass();
-    	
-    	Intent intent = new Intent(this, DisplayClassActivity.class);
-    	intent.putExtra(DANCE_CLASS, danceClass);
-    	startActivity(intent);
+    public void login(View view) {
+    	String email = getValueFromEditTextView(R.id.email);
+    	String password = getValueFromEditTextView(R.id.password);
+    	int screen = loginManager.login(email, password);
+    	changeScreens(screen);
     }
     
-    private DanceClass buildDanceClass() {
-    	DanceClass danceClass = new DanceClass();
-    	danceClass.setName(getValueFromEditTextView(R.id.edit_class_name));
-    	danceClass.setDescription(getValueFromEditTextView(R.id.edit_class_description));
-    	danceClass.setStartTime(getValueFromEditTextView(R.id.edit_class_time));
-    	danceClass.setDuration(Integer.parseInt(getValueFromEditTextView(R.id.edit_class_duration)));
-    	danceClass.setPrice(getValueFromEditTextView(R.id.edit_class_price));
-    	danceClass.setSize(Integer.parseInt(getValueFromEditTextView(R.id.edit_class_size)));
-    	danceClass.setOriginalInstructor(getValueFromSpinner(R.id.spinner_instructors));
-    	
-    	return danceClass;
+    private void changeScreens(final int screen) {
+    	if(screen == Constants.STUDIO){
+    		Intent intent = new Intent(this, StudioOwnerMainActivity.class);
+        	startActivity(intent);
+    	}
     }
     
     private String getValueFromEditTextView (int viewId) {
@@ -44,11 +42,5 @@ public class MainActivity extends Activity {
     	String value = editText.getText().toString();
     	return value;
     }
-    
-    private String getValueFromSpinner(int viewId) {
-    	Spinner instructors = (Spinner) findViewById(viewId);  
-    	String value = instructors.getSelectedItem().toString();     	
-    	return value;
 
-    }
 }

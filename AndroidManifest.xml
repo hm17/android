@@ -13,7 +13,8 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
     <activity android:name="MainActivity"
-              android:label="@string/app_name">
+              android:label="@string/app_name"
+              android:theme="@android:style/Theme.NoTitleBar">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
@@ -21,8 +22,36 @@
     </activity>
     
     <activity
+        android:name="StudioOwnerMainActivity"
+        android:label="@string/title_activity_studio_owner_main"
+        android:parentActivityName="MainActivity" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="MainActivity" />
+    </activity>
+    
+    <activity
         android:name="DisplayClassActivity"
         android:label="@string/title_activity_display_class"
+        android:parentActivityName="MainActivity" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="EditClassActivity" />
+    </activity>
+    
+    <activity
+        android:name="EditClassActivity"
+        android:label="@string/title_activity_edit_class"
+        android:parentActivityName="MainActivity" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="MainActivity" />
+    </activity>
+    
+    
+    <activity
+        android:name="DisplayAllClassesActivity"
+        android:label="@string/title_activity_display_all_classes"
         android:parentActivityName="MainActivity" >
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"

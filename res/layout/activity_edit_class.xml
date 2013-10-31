@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  
+    xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:id="@+id/ScrollView01"  
+    android:layout_width="wrap_content"  
+    android:layout_height="wrap_content"  
+    android:scrollbars="vertical">  
+    <LinearLayout  
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical" >
+	
+		<!--Put form controls here-->  
+	
+	    <TextView android:id="@+id/class_form_description"      
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/class_form_description" 
+	        android:textSize="10pt" />
+		    
+	   <EditText android:id="@+id/edit_class_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:hint="@string/edit_class_name" />
+		   		
+	   <EditText android:id="@+id/edit_class_description"
+	       android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:lines="5"
+	       android:hint="@string/edit_class_description" />	   
+		
+		<EditText android:id="@+id/edit_class_time"
+	       android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:hint="@string/edit_class_time" />
+		
+		<EditText android:id="@+id/edit_class_duration"
+	       android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:hint="@string/edit_class_duration" />
+	   
+		<EditText android:id="@+id/edit_class_price"
+	       android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:hint="@string/edit_class_price" />
+		
+		<EditText android:id="@+id/edit_class_size"
+	       android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:hint="@string/edit_class_size" />
+
+		<TextView android:id="@+id/class_instructor"      
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/instructor" 
+	        android:textSize="8pt" />
+			    
+		<Spinner  
+		    android:id="@+id/spinner_instructors"  
+		    android:layout_height="wrap_content"  
+		    android:prompt="@string/instructor"  
+		    android:layout_width="fill_parent"  
+		    android:entries="@array/instructor_list">  
+		</Spinner> 
+		
+		<Button  
+		    android:id="@+id/button_save_class"  
+		    android:layout_height="wrap_content"  
+		    android:text="@string/button_save_class"  
+		    android:onClick="saveClass"  
+		    android:layout_width="fill_parent">  
+		</Button>  
+		
+	
+	</LinearLayout>
+</ScrollView> 
+
+    
+

@@ -1,13 +1,24 @@
 <resources>
 
+    <!-- Login -->
     <string name="app_name">SampleShoppingCart</string>
+    <string name="appTitle">SampleShoppingCart</string>
+    <string name="appVersion">1.0</string>
+    <string name="edit_login_email">Email</string>
+    <string name="edit_login_password">Password</string>
     
-    <string name="title_activity_main">Create a New Class</string>
+    <string name="title_activity_main">Menu</string>
+    <string name="title_activity_studio_owner_main">Studio Owner Main Page</string>
+    <string name="title_activity_edit_class">Create a New Class</string>
     <string name="title_activity_display_class">Dance Class Information</string>
+    <string name="title_activity_display_all_classes">Displaying All Classes</string>
     <string name="class_title">Class Title</string>
     
+    <string name="button_new_class">CREATE CLASS</string>
+    <string name="button_display_all_classes">DISPLAY ALL CLASSES</string>
+    
     <!-- Edit Class Form -->
-    <string name="class_form_description">Edit the details for your class.</string>
+    <string name="class_form_description">Edit the details for your new class.</string>
     <string name="edit_class_name">Enter class name</string>
     <string name="button_name_add">Add</string>
     <string name="edit_class_description">Enter class description</string>

@@ -6,13 +6,17 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.swegnchic.sampleshoppingcart.danceclasses.DanceClass;
+import com.swegnchic.sampleshoppingcart.catalogue.Catalogue;
+import com.swegnchic.sampleshoppingcart.danceclass.DanceClass;
 
 public class DisplayClassActivity extends Activity {
 	private DanceClass danceClass;
+	
+	private Catalogue catalogue;
 	
 	@SuppressLint("NewApi")
 	@Override
@@ -20,9 +24,23 @@ public class DisplayClassActivity extends Activity {
 		super.onCreate(savedInstance);
 		setContentView(R.layout.activity_display_class);
 		
-		// Get the DanceClass object that was passed from the form.
+		
+		Intent intent = getIntent();		
+		long id = (Long) intent.getLongExtra(EditClassActivity.CLASS_ID, 0);
+		Log.v ("display", "id: " + id);
+		
+		catalogue = new Catalogue(this);
+		danceClass = catalogue.getDanceClassById(id);
+
+		
+    	Log.v ("display", "name: " + danceClass.getName());
+    	Log.v ("display", "description: " + danceClass.getDescription());
+		
+		
+		
+		/*// Get the DanceClass object that was passed from the form.
 		Intent intent = getIntent();
-		danceClass = (DanceClass) intent.getSerializableExtra(MainActivity.DANCE_CLASS);	
+		danceClass = (DanceClass) intent.getSerializableExtra(MainActivity.DANCE_CLASS);	*/
 		buildClassDisplay();
 
 		// Make sure we're running on Honeycomb or higher to use ActionBar APIs
@@ -35,11 +53,11 @@ public class DisplayClassActivity extends Activity {
 	private void buildClassDisplay() {
 		setClassDisplayText(R.id.class_display_name, danceClass.getName());
 		setClassDisplayText(R.id.class_display_description, danceClass.getDescription());
-		setClassDisplayText(R.id.class_display_time, danceClass.getStartTime());
+		/*setClassDisplayText(R.id.class_display_time, danceClass.getStartTime());
 		setClassDisplayText(R.id.class_display_duration, Integer.toString(danceClass.getDuration()));
 		setClassDisplayText(R.id.class_display_price, danceClass.getPrice());
 		setClassDisplayText(R.id.class_display_size, Integer.toString(danceClass.getSize()));
-		setClassDisplayText(R.id.class_display_instructor, danceClass.getOriginalInstructor());		
+		setClassDisplayText(R.id.class_display_instructor, danceClass.getOriginalInstructor());		*/
 	}
 	
 	private void setClassDisplayText(int viewId, String text) {
@@ -57,5 +75,6 @@ public class DisplayClassActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
    }
+
 
 }
