@@ -1,23 +1,26 @@
 <resources>
-
-    <!-- Login -->
-    <string name="app_name">SampleShoppingCart</string>
-    <string name="appTitle">SampleShoppingCart</string>
+    <string name="app_name">StudioX</string>
     <string name="appVersion">1.0</string>
+    
+    <!-- Login -->
+    <string name="appTitle">StudioX</string>
     <string name="edit_login_email">Email</string>
     <string name="edit_login_password">Password</string>
+    <string name="button_login">Login</string>
+    <string name="button_register">Sign Up</string>
     
+    <!-- Register -->
+    <string name="title_activity_register">Sign Up!</string>
+    <string name="register_email_description">Email</string>
+    
+    <!-- Studio Owner Menu -->
     <string name="title_activity_main">Menu</string>
     <string name="title_activity_studio_owner_main">Studio Owner Main Page</string>
-    <string name="title_activity_edit_class">Create a New Class</string>
-    <string name="title_activity_display_class">Dance Class Information</string>
-    <string name="title_activity_display_all_classes">Displaying All Classes</string>
-    <string name="class_title">Class Title</string>
-    
     <string name="button_new_class">CREATE CLASS</string>
     <string name="button_display_all_classes">DISPLAY ALL CLASSES</string>
     
     <!-- Edit Class Form -->
+    <string name="title_activity_edit_class">Create a New Class</string>
     <string name="class_form_description">Edit the details for your new class.</string>
     <string name="edit_class_name">Enter class name</string>
     <string name="button_name_add">Add</string>
@@ -26,16 +29,17 @@
     <string name="edit_class_duration">Enter class duration</string>
     <string name="edit_class_price">Enter class price</string>
     <string name="edit_class_size">Enter class size</string>
-        
-    <!-- Instructor Choices -->
-    <string name="instructor">Choose an Instructor</string>
-    <string name="instructor1">Miss Sexy</string>  
-    <string name="instructor2">Miss Twerk</string>  
-    <string name="instructor3">Miss Determination</string>  
-    <string name="instructor4">Miss Legs for Days</string>  
-    
     <string name="button_save_class">SAVE</string>
+        <!-- Instructor Choices -->
+	    <string name="instructor">Choose an Instructor</string>
+	    <string name="instructor1">Miss Sexy</string>  
+	    <string name="instructor2">Miss Twerk</string>  
+	    <string name="instructor3">Miss Determination</string>  
+	    <string name="instructor4">Miss Legs for Days</string>  
+          
     
+    <!-- Display New/Updated Class Info -->
+    <string name="title_activity_display_class">Dance Class Information</string>
     <string name="class_display_name">Name: </string>
     <string name="class_display_description">Description:</string>
     <string name="class_display_time">Start Time:</string>
@@ -43,5 +47,8 @@
     <string name="class_display_price">Price:</string>
     <string name="class_display_size">Students:</string>
     <string name="class_display_instructor">Instructor:</string>
+    
+    <!-- Display All Classes -->
+    <string name="title_activity_display_all_classes">Displaying All Classes</string>
 
 </resources>

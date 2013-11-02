@@ -1,5 +1,7 @@
 package com.swegnchic.sampleshoppingcart.loginmanager;
 
+import com.swegnchic.sampleshoppingcart.constants.Constants.Screens;
+
 
 public class LoginManager {
 	
@@ -7,12 +9,12 @@ public class LoginManager {
 		
 	}
 	
-	public int login(final String username, final String password) {
+	public Screens login(final String username, final String password) {
 		if(verifyCredentials(username, password)) {
 			transferPage();
 		}
 		
-		return 0;
+		return Screens.STUDIO;
 	}
 	
 	private Boolean verifyCredentials(final String username, final String password) {
@@ -20,9 +22,9 @@ public class LoginManager {
 		return true;
 	}
 	
-	private int transferPage() {
+	private Screens transferPage() {
 		
-		return 0;
+		return Screens.STUDIO;
 		
 	}
 }

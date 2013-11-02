@@ -1,66 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="#B8B8B8"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="#606060"         
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="15dp">
-<TableLayout 
-         android:id="@+id/table_login"
-         android:layout_width="fill_parent"
-         android:layout_height="wrap_content"
-         android:layout_weight="0"
-         android:padding="0dp"
-         android:layout_gravity="center"
-         android:shrinkColumns="*"  
-         android:stretchColumns="*" 
-         android:background="#FFFFFF">
+    android:padding="10dp"
+    android:gravity="center"
+    android:shrinkColumns="*"  
+    android:stretchColumns="*">
 
-     <TableRow android:layout_height="wrap_content"
-         android:padding="0dp"
-         android:background="#66FFFF"
-         android:layout_marginBottom="2dp">
-          <EditText android:id="@+id/email"
-                style="@style/login.edit.text"
-              	android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
-                android:layout_marginBottom="20dip"
-                android:singleLine="true"
-                android:hint="@string/edit_login_email"/>
-      </TableRow>
-      <TableRow android:layout_height="fill_parent"
-          android:background="#66FFFF">
-      	<EditText android:id="@+id/password"
-              	style="@style/login.edit.text"
-              android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
-                android:singleLine="true"
-                android:password="true"
-                android:hint="@string/edit_login_password" />
-      </TableRow>
-      <TableRow android:layout_height="fill_parent"
-          android:background="#66FFFF">
-          <!-- Login button -->
-          <Button android:id="@+id/btnLogin"
-              	style="login.button"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dip"
-                android:onClick="login"
-                android:text="Login"/>
-          <!-- Link to Registration Screen 
-          <TextView android:id="@+id/link_to_register"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dip"
-                android:layout_marginBottom="40dip"
-                android:text="New to Twitter? Register here"
-                android:gravity="center"
-                android:textSize="20dip"
-                android:textColor="#0b84aa"/>-->
- 
-      </TableRow>
+    <!-- App Title -->
+    <TextView
+        android:id="@+id/link_to_register"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/appTitle"
+        android:textColor="#FFF"
+        android:textSize="35sp" />
+
+   <!-- Login Box -->
+   <TableRow 
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:background="#66FFFF"
+        android:layout_marginBottom="2dp">
+        
+		<EditText android:id="@+id/email"
+		    style="@style/login.edit.text"
+			android:layout_weight="1"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="5dip"	    
+		    android:singleLine="true"
+		    android:hint="@string/edit_login_email"/>
+     </TableRow>
+     
+	<TableRow 
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:background="#66FFFF"
+        android:layout_marginBottom="2dp">
+		
+		<EditText android:id="@+id/password"
+	       	style="@style/login.edit.text"
+	       	android:layout_weight="1"
+         	android:layout_height="wrap_content"
+         	android:layout_marginTop="5dip"
+         	android:singleLine="true"
+         	android:inputType="textPassword"
+         	android:hint="@string/edit_login_password" />
+	</TableRow>
+
+	<TableRow 
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#66FFFF"
+        android:layout_marginBottom="2dp">
+	   
+	    <Button android:id="@+id/button_login"
+	          android:layout_weight="1"
+	          android:layout_height="wrap_content"
+	          android:text="@string/button_login"			          
+	          android:onClick="login">			        
+	    </Button>	    
+	   
+	    <Button android:id="@+id/button_register"
+	          android:layout_weight="1"
+	          android:layout_height="wrap_content"
+	          android:text="@string/button_register"
+	          android:gravity="center"
+	          android:textColor="#000000"
+	          android:onClick="register">			        
+	    </Button>	    
+   	</TableRow>   
+   		
 </TableLayout>
-</LinearLayout>
+
 

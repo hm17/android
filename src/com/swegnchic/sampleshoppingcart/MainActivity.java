@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.swegnchic.sampleshoppingcart.constants.Constants;
+import com.swegnchic.sampleshoppingcart.constants.Constants.Screens;
 import com.swegnchic.sampleshoppingcart.loginmanager.LoginManager;
 
 public class MainActivity extends Activity {
@@ -26,15 +27,29 @@ public class MainActivity extends Activity {
     public void login(View view) {
     	String email = getValueFromEditTextView(R.id.email);
     	String password = getValueFromEditTextView(R.id.password);
-    	int screen = loginManager.login(email, password);
+    	Screens screen = loginManager.login(email, password);
     	changeScreens(screen);
     }
     
-    private void changeScreens(final int screen) {
-    	if(screen == Constants.STUDIO){
-    		Intent intent = new Intent(this, StudioOwnerMainActivity.class);
-        	startActivity(intent);
-    	}
+    public void register(View view) {
+    	changeScreens(Constants.Screens.REGISTER);
+    }
+    
+    private void changeScreens(final Screens register) {
+    	switch(register) {
+    	case REGISTER:
+    		startActivityForScreen(RegisterActivity.class);
+    		break;
+    	case STUDIO:
+    		startActivityForScreen(StudioOwnerMainActivity.class);
+    		break;
+    	};
+    	
+    }
+    
+    private void startActivityForScreen(Class<?> cls) {
+		Intent intent = new Intent(this, cls);
+    	startActivity(intent);
     }
     
     private String getValueFromEditTextView (int viewId) {
@@ -42,5 +57,6 @@ public class MainActivity extends Activity {
     	String value = editText.getText().toString();
     	return value;
     }
+
 
 }

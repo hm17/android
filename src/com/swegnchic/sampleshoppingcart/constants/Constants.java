@@ -3,8 +3,7 @@ package com.swegnchic.sampleshoppingcart.constants;
 public class Constants {
 	
 	/** Screens **/
-	public final static int STUDIO = 0;
-	public final static int CUSTOMER = 1;
+	public static enum Screens { REGISTER, STUDIO, CUSTOMER };
 
 	/** Database Constants **/
 	public static final String DATABASE_NAME="datastorage";
