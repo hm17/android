@@ -11,7 +11,10 @@
     
     <!-- Register -->
     <string name="title_activity_register">Sign Up!</string>
+    <string name="register_instructions">Fill out your information to sign up for an account. We promise to make it worth your while ;]</string>
     <string name="register_email_description">Email</string>
+    <string name="register_password_description">Password</string>
+    <string name="register_confirm_description">Confirm Password</string>
     
     <!-- Studio Owner Menu -->
     <string name="title_activity_main">Menu</string>

@@ -39,6 +39,15 @@
         <item name="android:focusable">true</item>
         <item name="android:clickable">true</item>
     </style> -->
+    
+    <!-- Sign Up  -->
+    <style name="register.edit.text" parent="@android:style/Widget.EditText">
+	    <item name="android:textColor">#FFFFFF</item>
+	    <item name="android:textSize">15sp</item>
+	    <item name="android:textColorHint">#FFFFFF</item>
+	    <item name="android:background">@android:color/transparent</item>
+	    <item name="android:padding">5dp</item>
+	</style>
 	
     
 
