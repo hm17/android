@@ -23,7 +23,7 @@ public class DisplayAllClassesActivity extends ListActivity{
                 
         content = (TextView)findViewById(R.id.output);
 		
-        catalogue = new Catalogue(this);
+        catalogue = Catalogue.getCatalogue(this);
 
         //listView = (ListView) findViewById(R.id.list);
         List<String> names = catalogue.getDanceClassNames();

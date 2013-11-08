@@ -16,15 +16,24 @@ import com.swegnchic.sampleshoppingcart.danceclass.DanceClass;
  *
  */
 public class Catalogue {
+	private static Catalogue catalogue;
 	
 	private CatalogueDAO catalogueDAO;
 	
 	private List<DanceClass> danceClasses;
 	
-	public Catalogue(Context context) {		
+	private Catalogue(Context context) {		
 		catalogueDAO = new CatalogueDAO(context);
 		
 		danceClasses = getDanceClasses();
+	}
+	
+	public static Catalogue getCatalogue(Context context) {
+		if(catalogue == null) {
+			catalogue = new Catalogue(context);
+		}
+		
+		return catalogue;
 	}
 	
 	public int getCatalogueSize() {

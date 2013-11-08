@@ -6,46 +6,71 @@ public class User {
 	private String type;
 	private int id;
 	private Phonenumber phonenumber;
+	private String email;
+	private String password;
 	
-	public User() {}
+	public User() {
+		
+	}
+	
+	public User(final String email, final String password) {
+		setEmail(email);
+		setPassword(password);
+	}
+	
+	public String getEmail() {
+		return email;
+	}
 
-	protected Name getName() {
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Name getName() {
 		return name;
 	}
 
-	protected void setName(Name name) {
+	public void setName(Name name) {
 		this.name = name;
 	}
 
-	protected Address getAddress() {
+	public Address getAddress() {
 		return address;
 	}
 
-	protected void setAddress(Address address) {
+	public void setAddress(Address address) {
 		this.address = address;
 	}
 
-	protected String getType() {
+	public String getType() {
 		return type;
 	}
 
-	protected void setType(String type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 
-	protected int getId() {
+	public int getId() {
 		return id;
 	}
 
-	protected void setId(int id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
-	protected Phonenumber getPhonenumber() {
+	public Phonenumber getPhonenumber() {
 		return phonenumber;
 	}
 
-	protected void setPhonenumber(Phonenumber phonenumber) {
+	public void setPhonenumber(Phonenumber phonenumber) {
 		this.phonenumber = phonenumber;
 	}
 }

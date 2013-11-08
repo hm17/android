@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        loginManager = new LoginManager();          
+        loginManager = new LoginManager(this.getApplicationContext());          
     }
     
     public void login(View view) {

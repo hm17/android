@@ -24,7 +24,7 @@ public class EditClassActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_class);
         
-        catalogue = new Catalogue(this);
+        catalogue = Catalogue.getCatalogue(this);
 
     }
     

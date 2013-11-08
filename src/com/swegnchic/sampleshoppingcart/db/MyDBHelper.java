@@ -17,12 +17,17 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class MyDBHelper extends SQLiteOpenHelper{
 
-	private static final String CREATE_TABLE_QUERY="create table " + 
+	private static final String CREATE_CLASS_TABLE_QUERY="create table " + 
 			Constants.TABLE_NAME + " (" + 
 			Constants.KEY_ID +" integer primary key autoincrement, " +
 			Constants.CLASS_NAME + " text not null, " +
-			Constants.DESCRIPTION_NAME + " text not null);";//, " +
-			//Constants.START_NAME + " long);";
+			Constants.DESCRIPTION_NAME + " text not null);";
+	
+	private static final String CREATE_USER_TABLE_QUERY="create table " + 
+		Constants.USER_TABLE_NAME + " (" + 
+		Constants.KEY_ID +" integer primary key autoincrement, " +
+		Constants.EMAIL_NAME + " text not null, " +
+		Constants.PASSWORD_NAME + " text not null);";	
 	
 	public MyDBHelper(Context context, String name, CursorFactory factory, int version) {
 		super(context, name, factory, version);
@@ -32,7 +37,8 @@ public class MyDBHelper extends SQLiteOpenHelper{
 	public void onCreate(SQLiteDatabase db) {
 		System.out.println ("MyDBHelper onCreate: Creating all the tables");
 		try {
-			db.execSQL(CREATE_TABLE_QUERY);
+			db.execSQL(CREATE_CLASS_TABLE_QUERY);
+			db.execSQL(CREATE_USER_TABLE_QUERY);
 		} catch(SQLiteException e) {
 			System.out.println ("Create table exception: " + e.getMessage());
 		}

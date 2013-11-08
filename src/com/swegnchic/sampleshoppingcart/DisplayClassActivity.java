@@ -29,7 +29,7 @@ public class DisplayClassActivity extends Activity {
 		long id = (Long) intent.getLongExtra(EditClassActivity.CLASS_ID, 0);
 		Log.v ("display", "id: " + id);
 		
-		catalogue = new Catalogue(this);
+		catalogue = Catalogue.getCatalogue(this);
 		danceClass = catalogue.getDanceClassById(id);
 
 		

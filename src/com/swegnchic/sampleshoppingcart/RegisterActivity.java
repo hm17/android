@@ -6,13 +6,19 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.swegnchic.sampleshoppingcart.directory.Directory;
+import com.swegnchic.sampleshoppingcart.users.user.User;
+
 public class RegisterActivity extends Activity{
+	private Directory directory;
 	private static final int PASSWORD_LIMIT = 8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);     
+        setContentView(R.layout.activity_register);  
+        
+        directory = Directory.getDirectory(this); 
     }
     
     public void register(View view) { 	
@@ -20,8 +26,12 @@ public class RegisterActivity extends Activity{
     	String password = getValueFromEditTextAndValidate(R.id.register_password);
     	String passwordConfirm = getValueFromEditTextAndValidate(R.id.register_password_confirm);
     	if(checkPasswordValidity(password, passwordConfirm)){
-    		
-    		//TODO: Save user to DB
+    		User user = new User();
+    		user.setEmail(email);
+    		user.setPassword(password);
+    		if(directory.saveUser(user) >= 0) {
+    			Toast.makeText(this, "You've been added!", Toast.LENGTH_SHORT).show();
+    		}
     	}
     }
     
