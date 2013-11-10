@@ -11,16 +11,15 @@ public class LoginManager {
 	private Directory directory;
 	
 	public LoginManager(Context context) {
-		directory = Directory.getDirectory(context);
-		
+		directory = Directory.getInstance(context);		
 	}
 	
 	public Screens login(final String username, final String password) {
 		if(verifyCredentials(username, password)) {
-			transferPage();
+			return transferPage();
 		}
 		
-		return Screens.STUDIO;
+		return Screens.ERROR;
 	}
 	
 	private Boolean verifyCredentials(final String username, final String password) {
@@ -34,7 +33,6 @@ public class LoginManager {
 	}
 	
 	private Screens transferPage() {
-		
 		return Screens.STUDIO;
 		
 	}

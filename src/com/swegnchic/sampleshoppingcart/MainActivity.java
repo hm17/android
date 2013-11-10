@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.swegnchic.sampleshoppingcart.constants.Constants;
 import com.swegnchic.sampleshoppingcart.constants.Constants.Screens;
@@ -27,8 +28,13 @@ public class MainActivity extends Activity {
     public void login(View view) {
     	String email = getValueFromEditTextView(R.id.email);
     	String password = getValueFromEditTextView(R.id.password);
+    	
     	Screens screen = loginManager.login(email, password);
-    	changeScreens(screen);
+    	if(screen.equals(Screens.ERROR)) {
+    		Toast.makeText(this, "Please login with the appropriate credentials.", Toast.LENGTH_SHORT).show();
+    	} else {
+    		changeScreens(screen);
+    	}	
     }
     
     public void register(View view) {
