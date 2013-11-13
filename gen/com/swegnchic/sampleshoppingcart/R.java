@@ -27,6 +27,7 @@ public final class R {
     }
     public static final class id {
         public static final int ScrollView01=0x7f070010;
+        public static final int button_cancel_register_form=0x7f070025;
         public static final int button_login=0x7f07001e;
         public static final int button_register=0x7f07001f;
         public static final int button_register_form=0x7f070024;
@@ -79,55 +80,56 @@ public final class R {
         public static final int appTitle=0x7f050002;
         public static final int appVersion=0x7f050001;
         public static final int app_name=0x7f050000;
-        public static final int button_display_all_classes=0x7f05000f;
+        public static final int button_cancel=0x7f05000c;
+        public static final int button_display_all_classes=0x7f050010;
         public static final int button_login=0x7f050005;
-        public static final int button_name_add=0x7f050013;
-        public static final int button_new_class=0x7f05000e;
-        public static final int button_register=0x7f050006;
-        public static final int button_save_class=0x7f050019;
-        public static final int class_display_description=0x7f050021;
-        public static final int class_display_duration=0x7f050023;
-        public static final int class_display_instructor=0x7f050026;
-        public static final int class_display_name=0x7f050020;
-        public static final int class_display_price=0x7f050024;
-        public static final int class_display_size=0x7f050025;
-        public static final int class_display_time=0x7f050022;
-        public static final int class_form_description=0x7f050011;
-        public static final int edit_class_description=0x7f050014;
-        public static final int edit_class_duration=0x7f050016;
-        public static final int edit_class_name=0x7f050012;
-        public static final int edit_class_price=0x7f050017;
-        public static final int edit_class_size=0x7f050018;
-        public static final int edit_class_time=0x7f050015;
+        public static final int button_name_add=0x7f050014;
+        public static final int button_new_class=0x7f05000f;
+        public static final int button_register=0x7f05000b;
+        public static final int button_save_class=0x7f05001a;
+        public static final int class_display_description=0x7f050022;
+        public static final int class_display_duration=0x7f050024;
+        public static final int class_display_instructor=0x7f050027;
+        public static final int class_display_name=0x7f050021;
+        public static final int class_display_price=0x7f050025;
+        public static final int class_display_size=0x7f050026;
+        public static final int class_display_time=0x7f050023;
+        public static final int class_form_description=0x7f050012;
+        public static final int edit_class_description=0x7f050015;
+        public static final int edit_class_duration=0x7f050017;
+        public static final int edit_class_name=0x7f050013;
+        public static final int edit_class_price=0x7f050018;
+        public static final int edit_class_size=0x7f050019;
+        public static final int edit_class_time=0x7f050016;
         public static final int edit_login_email=0x7f050003;
         public static final int edit_login_password=0x7f050004;
         /**  Instructor Choices 
          */
-        public static final int instructor=0x7f05001a;
-        public static final int instructor1=0x7f05001b;
-        public static final int instructor2=0x7f05001c;
-        public static final int instructor3=0x7f05001d;
-        public static final int instructor4=0x7f05001e;
-        public static final int register_confirm_description=0x7f05000b;
-        public static final int register_email_description=0x7f050009;
-        public static final int register_instructions=0x7f050008;
-        public static final int register_password_description=0x7f05000a;
+        public static final int instructor=0x7f05001b;
+        public static final int instructor1=0x7f05001c;
+        public static final int instructor2=0x7f05001d;
+        public static final int instructor3=0x7f05001e;
+        public static final int instructor4=0x7f05001f;
+        public static final int register_confirm_description=0x7f05000a;
+        public static final int register_email_description=0x7f050008;
+        public static final int register_instructions=0x7f050007;
+        public static final int register_password_description=0x7f050009;
         /**  Display All Classes 
          */
-        public static final int title_activity_display_all_classes=0x7f050027;
+        public static final int title_activity_display_all_classes=0x7f050028;
         /**  Display New/Updated Class Info 
          */
-        public static final int title_activity_display_class=0x7f05001f;
+        public static final int title_activity_display_class=0x7f050020;
         /**  Edit Class Form 
          */
-        public static final int title_activity_edit_class=0x7f050010;
+        public static final int title_activity_edit_class=0x7f050011;
         /**  Studio Owner Menu 
          */
-        public static final int title_activity_main=0x7f05000c;
+        public static final int title_activity_main=0x7f05000d;
         /**  Register 
          */
-        public static final int title_activity_register=0x7f050007;
-        public static final int title_activity_studio_owner_main=0x7f05000d;
+        public static final int title_activity_register=0x7f050006;
+        public static final int title_activity_studio_owner_main=0x7f05000e;
     }
     public static final class style {
         /** 

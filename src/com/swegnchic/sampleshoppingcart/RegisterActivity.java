@@ -15,10 +15,10 @@ import com.swegnchic.sampleshoppingcart.users.user.User;
 
 public class RegisterActivity extends Activity{
 	private Directory directory;
-	private static final int PASSWORD_LIMIT = 8;
 	private static final String EMAIL_REGEX = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+	private static final String PASSWORD_REGEX = "^(?=.*(\\d|\\W)).{8,20}$";
 	private User user;
-
+ 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +26,10 @@ public class RegisterActivity extends Activity{
         
         directory = Directory.getInstance(this); 
         user = new User();
+    }
+    
+    public void cancel(View view) {
+    	backToLoginScreen();
     }
     
     public void register(View view) { 	
@@ -70,14 +74,12 @@ public class RegisterActivity extends Activity{
     	if(!password.equals(passwordConfirm)) {
     		Toast.makeText(this, "Passwords do not match!", Toast.LENGTH_SHORT).show();
     		return false;
-    	} else if(password.length() < PASSWORD_LIMIT || passwordConfirm.length() < PASSWORD_LIMIT) {
-    		Toast.makeText(this, "Password must be " + PASSWORD_LIMIT + " or more characters", Toast.LENGTH_SHORT).show();
+    	} else if(!Pattern.matches(PASSWORD_REGEX, password)) {
+    		Toast.makeText(this, "Password must be at least 8 characters long with special characters and numbers.", Toast.LENGTH_SHORT).show();
     		return false;
     	} else {
     		return true;
     	}
-    	
-    	//TODO: Check alphanumeric value of password
     }
     
     private void createUser(final String email, final String password) {

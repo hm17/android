@@ -24,10 +24,9 @@ public class LoginManager {
 	
 	private Boolean verifyCredentials(final String username, final String password) {
 		User user = directory.getUserByEmail(username);
-		if(user != null){
-			user.getPassword().equals(password);
+		
+		if(user != null && user.getPassword().equals(password))
 			return true;
-		}
 		
 		return false;
 	}
